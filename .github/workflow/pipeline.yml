@@ -1,0 +1,10 @@
+name: test-pipeline
+on:
+  push:
+    branches:
+      - main
+jobs:
+  simaple_deployment_pipeline:
+    runs-on: ubuntu-22.04
+    steps: 
+      - uses: actions/checkout@v4
