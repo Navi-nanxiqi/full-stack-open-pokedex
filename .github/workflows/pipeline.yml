@@ -7,4 +7,12 @@ jobs:
   simaple_deployment_pipeline:
     runs-on: ubuntu-22.04
     steps: 
+    # uses：运行一个特定的动作
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: npm install
+        run: npm install
+      - name: lint
+        run: npm run eslint
